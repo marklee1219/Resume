@@ -1,0 +1,298 @@
+/*font-family: 'VT323', monospace;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Arvo', serif;*/
+
+/*Color Palette
+#2B2D42 - dark blue
+#8D99AE - light blue
+#EDF2F4 - blue/white
+#EF233C - red
+#7FFF00 - CHARTREUSE
+#000000 - black
+*/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Open Sans';
+  margin 0;
+}
+
+h1, h2{
+  font-family:  'VT323', monospace;
+  font-weight: 400;
+}
+h1
+{
+  font-size: 80px;
+}
+h2 {
+  font-size: 40px;
+  margin-top: 0;
+}
+h3{
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.education h3 {
+  font-size: 28px;
+}
+
+p{
+  font-size: 18px;
+}
+a {
+  color: #EF233C;
+}
+a:hover {
+  text-decoration: none;
+}
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  overflow: hidden;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+ /*Download button*/
+.btn {
+  text-decoration: none;
+  background: #EF233C;
+  color: white;
+  padding: 10px;
+  display: inline-block;
+}
+
+/*Header and Footer
+----------------------------*/
+header, footer {
+  background: #03254E;
+  color: #7FFF00;
+}
+ /*header*/
+header {
+  padding-top: 50px;
+  position: relative;
+}
+header h1, header h2 {
+  color: #EDF2F4;
+  margin: 0;
+}
+.profile-img {
+  border-radius: 50%;
+}
+.download {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*main*/
+main {
+  color: #7FFF00;
+}
+
+/*footer*/
+footer {
+  text-align: center;
+}
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
+}
+
+ /*Navigation
+-------------------------------*/
+nav {
+  text-align: center;
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav a {
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #3C6E71;
+  font-size: 1.5em;
+
+}
+
+/*Work Experience
+----------------------*/
+.work {
+  background: #000000;
+}
+h3 ~ p {
+  margin: 0;
+}
+.job-description {
+  margin-bottom: 25px;
+}
+.job-description p:first-of-type {
+  margin-top: 0;
+}
+
+.job-description p:first-child {
+  font-weight: bold;
+}
+ /*Education
+---------------------------*/
+.education {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+              url(../images/computer-cpu-image.jpg) no-repeat fixed;
+  background-size: cover;
+}
+
+p + h3 {
+  margin-top: 30px;
+}
+/*Title change animation
+-------------------------*/
+.col-wide h1{
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {color:#03254E;}
+    to {color:#EDF2F4;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  from {color:#03254E;}
+  to {color:#EDF2F4;}
+}
+
+/*list font size
+---------------------*/
+ul li {
+  font-size: 1.2em;
+
+}
+
+
+
+/*Media Queries
+-------------------------*/
+@media (min-width: 900px) {
+  .col-narrow {
+    width: 30%;
+    float: left;
+  }
+  .col-wide {
+    width: 70%;
+    float: left;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 899px){
+  header {
+    text-align: center;
+  }
+  header li {
+    text-align: left;
+  }
+  .profile-img{
+    width: 200px;
+  }
+
+  .profile {
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+
+  }
+}
+
+  @media (max-width: 671px){
+nav {
+      position: absolute;
+    }
+
+  header {
+  padding-top: 80px;
+  position: relative;
+   }
+   .profile {
+     padding-top: 60px;
+     padding-right: 50px;
+     padding-bottom: 60px;
+     padding-left: 50px;
+
+   }
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+}
+  @media (max-width: 372px){
+  nav {
+    display: none;
+    }
+  header {
+  padding-top: 0px;
+  position: relative;
+   }
+
+.profile {
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 60px;
+  padding-left: 50px;
+
+}
+   #myBtn {
+     display: none;
+     position: fixed;
+     bottom: 20px;
+     right: 10px;
+     z-index: 99;
+     border: none;
+     outline: none;
+     background-color: red;
+     color: white;
+     cursor: pointer;
+     padding: 10px;
+     border-radius: 10px;
+   }
+
+   #myBtn:hover {
+     background-color: #555;
+   }
+}
